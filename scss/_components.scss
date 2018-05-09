@@ -1,0 +1,77 @@
+.button {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  height: 4.8rem;
+  max-width: 32rem;
+  width: 100%;
+  color: $white;
+  background: $green;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 1.5rem;
+  margin: 3rem 0 0;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    background: $lightgreen;
+    box-shadow: 0 0.8rem 1.6rem -0.8rem rgba($lightgreen, 0.32);
+  }
+}
+.box {
+  z-index: 2;
+  color: $black;
+  background: $white;
+  box-shadow: $shadow;
+  border-radius: 0.2rem;
+  padding: 4.8rem;
+}
+.box--compact {
+  padding: 3.6rem;
+}
+.box--green {
+  z-index: 1;
+  background: $green;
+  color: $white;
+  box-shadow: none;
+}
+.box--image {
+  z-index: 1;
+  box-shadow: none;
+}
+.form {
+  width: 100%;
+  .form--name,
+  .form--email {
+    height: 4.2rem;
+    width: calc(50% - 0.8rem);
+    border: none;
+    border-bottom: 1px solid $lightgrey;
+    cursor: text;
+    transition: 0.15s;
+    &:focus {
+      border-color: $green;
+      box-shadow: 0 1px $green;
+    }
+  }
+  .form--name {
+    margin-right: 1.2rem;
+  }
+  .form--message {
+    width: 100%;
+    border: 1px solid $lightgrey;
+    border-radius: 0.2rem;
+    background: $background-grey;
+    padding: 2rem 1.6rem;
+    margin: 2.4rem 0 0;
+    resize: none;
+    cursor: text;
+    transition: 0.15s;
+    &:focus {
+      border-color: $green;
+      box-shadow: 0 0 0 1px $green;
+      background: rgba($green, 0.05);
+    }
+  }
+}

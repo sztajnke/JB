@@ -1,0 +1,43 @@
+.row {
+	@include flexbox();
+	@include flex-direction(row);
+	@include flex(1 1 auto);
+	@include align-items(center);
+	@include justify-content(center);  
+}
+.row--grid {
+  max-width: 124.8rem;
+  padding: 0 2.4rem;
+  margin: auto;
+}
+
+.col {
+  @include flexbox();
+  @include flex-direction(column);
+  @include flex(1 1 auto);
+}
+
+.col--header {
+  @include align-items(center);
+  max-width: 72rem;
+  text-align: center;
+}
+
+section {
+background: $white;
+padding: 10rem 0;
+}
+
+.section--grey {
+background: $background-grey;
+}
+
+.footer {
+  @include breakpoint(big){
+    padding: 4rem 0;}
+  @include breakpoint(medium){
+    padding: 2.2rem 0;}
+  @include breakpoint(small){
+    padding: 1.5rem 0;}
+    background: $navy;
+}

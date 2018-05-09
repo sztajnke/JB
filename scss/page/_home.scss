@@ -1,0 +1,248 @@
+#main {
+  @include flexbox();
+  background: url('../img/pp-background.jpg') center center/cover fixed;
+  min-height: 58rem;
+  height: 72vh;
+  .row {
+    margin: auto;
+  }
+}
+
+#about {
+  position: relative;
+  padding: 10rem 0 8rem;
+	
+  @include breakpoint(small){	
+	padding: 2rem 0;
+	}
+	
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 22rem;
+    background: $white;
+  }
+  
+  .col {
+    @include breakpoint(big){
+      width: 50%; }
+    @include breakpoint(medium){
+      width: 50%; }
+    @include breakpoint(small){ 
+      width: 100%; }
+  }
+  .box.text--black {
+    margin: 0;
+  }
+  
+  .box.box--green {
+    @include breakpoint(big){  
+      margin: 0 0 0 6rem;} 
+	  @include breakpoint(small){ 
+	    margin: 0 6rem 0 6rem;} 
+	  @include breakpoint(micro){ 
+	    margin: 0;} 
+      border-radius: 0 0 0.2rem 0.2rem;
+      text-align: center;
+    
+    h4 {
+      margin: 0 0 2rem;
+    }
+    .row {
+      @include breakpoint(big){ 
+      @include align-items(stretch);} 
+      @include breakpoint(medium){ 
+      @include flex-direction(column);
+      @include justify-content(center)}
+    }
+    
+    .col {
+      @include flex(0 1 auto);
+      @include breakpoint(big){ 
+      width: 30%;
+      } 
+
+    @include breakpoint(small){ 
+      width: 100%;
+      padding:10px 0;
+      }
+    }
+  }
+  .box--image {
+    background: url('../img/pp-foosball-match.jpg') center center/cover;
+    height: 46.2rem;
+    padding: 0 0.2rem 0.2rem 0;
+  }
+	
+	.row {
+		@include breakpoint(medium){
+		  @include flex-direction(row); 
+		}
+    
+	  @include breakpoint(small){ 
+		@include flex-direction(column); 
+		}
+	}
+  
+	.button { 
+	 @include breakpoint(small){ 
+			@include align-self(center); 
+		}
+  }
+}
+
+#rewards { 
+	@include breakpoint(medium){	
+	  padding: 2rem 0 10rem;
+	}
+  
+	@include breakpoint(small){	
+	  padding: 2rem 0;
+	}
+  
+  .col {
+    text-align: center; 
+  }
+  
+  .row--rewards {
+		margin: 4.8rem auto 0;
+	  @include breakpoint(big){ 
+  	  	@include align-items(stretch);} 
+		@include breakpoint(medium){ 
+  	  	@include align-items(flex-start);} 
+		 @include breakpoint(small){ 
+			 @include flex(0 1 auto);
+			@include flex-direction(column);
+			@include justify-content(center);	
+		  } 
+  }
+	
+    .col {   
+      @include flex(0 1 auto);
+      @include breakpoint(medium){ 
+        width: 20%;
+        padding: 0 1.8rem;
+      } 
+      @include breakpoint(medium){ 
+        width: 100%;
+        padding: 2rem 1.8rem;
+      } 
+		}
+	   
+  .img--rewards {
+    @include flexbox();
+    height: 12rem;
+    
+    img {
+      margin: auto;
+    }
+  }
+  h5 {
+    margin: 1.2rem 0 0;
+  }
+}
+
+#howto {
+	@include breakpoint(small){	
+	padding: 2rem 0;
+	}
+  .row--grid {
+    @include align-items(flex-start);
+	  @include breakpoint(small){ 
+ 			@include flex-direction(column);
+			@include justify-content(center)}
+  }
+  .col {
+   @include breakpoint(big){
+		width: 50%;  }
+	  @include breakpoint(medium){
+		width: 50%;  }
+	    @include breakpoint(small){ 
+			width: 100%; 
+			}
+  }
+  .box--green {
+    position: relative;
+    @include breakpoint(big){  
+		margin: 0 0 0 6rem;} 
+	  @include breakpoint(small){ 
+		margin: 0 6rem 0 6rem;} 
+	   @include breakpoint(micro){ 
+		margin: 0;} 
+    @include breakpoint(big){  
+		padding-left: 13.8rem;} 
+	  @include breakpoint(small){ 
+		padding-left: 5rem;} 
+	  
+    .row {
+		@include breakpoint(medium) {
+		  margin: 2.4rem 0 0;
+		}
+	  @include breakpoint(small) {
+		  margin: 2rem 0;
+		}}
+    img {
+      margin-right: 2rem;
+    }
+  }
+  i {
+   @include breakpoint(big){  
+		 color: $ivory;
+    position: absolute;
+    top: 4rem;
+    left: 8.4rem;
+    font-size: 2.4rem;} 
+	  @include breakpoint(small){ 
+		display:none;} 
+	  
+	 
+  }
+}
+
+#contact {
+	@include breakpoint(small){	
+	  padding: 2rem 0;
+	}
+  
+	.col {
+    @include breakpoint(big){
+		  width: 50%;  }
+	  @include breakpoint(medium){
+		  width: 50%;  }
+    @include breakpoint(small){ 
+		  width: 100%; 
+		}
+  }
+  
+	.row--grid {
+    @include align-items(flex-start);
+	  @include breakpoint(small){ 
+ 			@include flex-direction(column);
+			@include justify-content(center)
+    }
+  }
+  
+	input {
+	  @include breakpoint(micro){ 
+ 			display:block;
+		width: 100%;}
+  }
+  
+  .box--image {
+    background: url('../img/pp-office.jpg') center center/cover;
+    height: 42rem;
+  }
+  
+  .col--form {
+	  @include breakpoint(big){
+		  padding: 0 0 0 6rem;  }
+	  @include breakpoint(medium){
+		  padding: 0 0 0 4rem;  }
+	  @include breakpoint(small){
+		  padding: 2rem 0 0;
+	  }
+  }
+}
