@@ -1,0 +1,44 @@
+.row {
+	@include flexbox();
+	@include flex-direction(row);
+	@include flex(1 1 auto);
+	@include align-items(center);
+	@include justify-content(center);  
+}
+.row--grid {
+  max-width: 124.8rem;
+  
+  margin: auto;
+  @include breakpoint(big){
+   padding: 0 2.4rem;}
+  @include breakpoint(medium){
+    padding: 0 1.8rem;}
+  @include breakpoint(small){
+    padding: 0 1.5rem;}
+}
+.col {
+  @include flexbox();
+  @include flex-direction(column);
+  @include flex(1 1 auto);
+}
+.col--header {
+  @include align-items(center);
+  max-width: 72rem;
+  text-align: center;
+}
+section {
+  background: $white;
+  padding: 10rem 0;
+}
+.section--grey {
+  background: $background-grey;
+}
+.footer {
+  @include breakpoint(big){
+    padding: 4rem 0;}
+  @include breakpoint(medium){
+    padding: 2.2rem 0;}
+  @include breakpoint(small){
+    padding: 1.5rem 0;}
+    background: $navy;
+}

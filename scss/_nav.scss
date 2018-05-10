@@ -1,0 +1,65 @@
+@include breakpoint(big) { 
+  #nav--sliding { 
+    display:none;
+  }
+}
+
+@include breakpoint(medium) { 
+
+#nav--sliding { 
+  
+  #nav--toggle {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1.2rem;
+      margin-right: 2rem;
+      padding: 1rem;
+    
+    }
+  #nav_button {
+      margin-top: 1.2rem;
+      margin-right: 2rem;
+      padding: 1rem;
+      background-color: transparent;
+      background-repeat: no-repeat;    
+      border: none;
+      overflow: hidden;
+      outline: none;
+    }
+
+  
+}
+  #nav--bar {
+    background-color: #1e3066;
+    
+    
+  
+    ul {
+      padding: 0px;
+      margin:5rem 0 0;
+     
+    }
+
+    li {
+      list-style: none; 
+    }
+  
+    a {
+      padding: 1rem 3rem;
+      border-left: 0;
+      margin:2rem 0;
+      display: block;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    
+     a:hover {
+      color:#54b847;
+      border-left: 1rem solid #54b847;
+       padding: 1rem 2rem;
+    }
+  }
+}
+
