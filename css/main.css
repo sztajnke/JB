@@ -470,6 +470,46 @@ p {
 
   .button {
     font-size: 95%; } }
+@media (min-width: 65em) {
+  #nav--sliding {
+    display: none; } }
+@media (max-width: 65em) {
+  #nav--sliding #nav--toggle {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1.2rem;
+    margin-right: 2rem;
+    padding: 1rem; }
+  #nav--sliding #nav_button {
+    margin-top: 1.2rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none; }
+
+  #nav--bar {
+    background-color: #1e3066; }
+    #nav--bar ul {
+      padding: 0px;
+      margin: 5rem 0 0; }
+    #nav--bar li {
+      list-style: none; }
+    #nav--bar a {
+      padding: 1rem 3rem;
+      border-left: 0;
+      margin: 2rem 0;
+      display: block;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700; }
+    #nav--bar a:hover {
+      color: #54b847;
+      border-left: 1rem solid #54b847;
+      padding: 1rem 2rem; } }
 .row {
   display: -webkit-box;
   display: -moz-box;
@@ -497,8 +537,16 @@ p {
 
 .row--grid {
   max-width: 124.8rem;
-  padding: 0 2.4rem;
   margin: auto; }
+  @media (min-width: 65em) {
+    .row--grid {
+      padding: 0 2.4rem; } }
+  @media (max-width: 65em) {
+    .row--grid {
+      padding: 0 1.8rem; } }
+  @media (max-width: 45em) {
+    .row--grid {
+      padding: 0 1.5rem; } }
 
 .col {
   display: -webkit-box;
@@ -568,14 +616,11 @@ section {
     .nav .nav--item {
       visibility: hidden; } }
   @media (min-width: 65em) {
-    .nav .nav-s-col {
-      background: none; } }
+    .nav .nav--collapsed {
+      display: none; } }
   @media (max-width: 65em) {
-    .nav .nav-s-col {
-      background-image: url("../img/menu-alt.svg");
-      background-repeat: no-repeat;
-      background-position: right top;
-      height: 32px; } }
+    .nav .nav--collapsed {
+      display: inline; } }
 
 #main {
   display: -webkit-box;
@@ -594,7 +639,7 @@ section {
   padding: 10rem 0 8rem; }
   @media (max-width: 45em) {
     #about {
-      padding: 2rem 0; } }
+      padding: 1rem 0; } }
   #about:before {
     content: '';
     position: absolute;
@@ -612,8 +657,18 @@ section {
   @media (max-width: 45em) {
     #about .col {
       width: 100%; } }
-  #about .box.text--black {
-    margin: 0; }
+  @media (min-width: 65em) {
+    #about .box.text--black {
+      margin: 0 -3rem 0 0; } }
+  @media (max-width: 65em) {
+    #about .box.text--black {
+      margin: 0 -3rem 0 0; } }
+  @media (max-width: 45em) {
+    #about .box.text--black {
+      margin: 0;
+      padding: 4rem; }
+      #about .box.text--black .button {
+        margin: 2rem 0 0; } }
   #about .box.box--green {
     border-radius: 0 0 0.2rem 0.2rem;
     text-align: center; }
@@ -660,8 +715,18 @@ section {
           padding: 10px 0; } }
   #about .box--image {
     background: url("../img/pp-foosball-match.jpg") center center/cover;
-    height: 46.2rem;
     padding: 0 0.2rem 0.2rem 0; }
+    @media (min-width: 65em) {
+      #about .box--image {
+        height: 46.2rem;
+        padding: 0 0.2rem 0.2rem 0; } }
+    @media (max-width: 65em) {
+      #about .box--image {
+        height: 65rem;
+        padding: 0 0.2rem 0.2rem 0; } }
+    @media (max-width: 45em) {
+      #about .box--image {
+        height: 20rem; } }
   @media (max-width: 65em) {
     #about .row {
       -webkit-flex-direction: row;
@@ -679,8 +744,12 @@ section {
       -webkit-align-self: center;
       -moz-align-self: center;
       -ms-align-self: center;
-      align-self: center; } }
+      align-self: center;
+      margin: 0; } }
 
+@media (min-width: 65em) {
+  #rewards {
+    padding: 2rem 0 10rem; } }
 @media (max-width: 65em) {
   #rewards {
     padding: 2rem 0 10rem; } }
@@ -725,7 +794,7 @@ section {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto; }
-  @media (max-width: 65em) {
+  @media (min-width: 65em) {
     #rewards .col {
       width: 20%;
       padding: 0 1.8rem; } }
@@ -733,6 +802,10 @@ section {
     #rewards .col {
       width: 100%;
       padding: 2rem 1.8rem; } }
+@media (min-width: 65em) {
+  #rewards .col--header {
+    width: 100%;
+    padding: 0 1.8rem; } }
 #rewards .img--rewards {
   display: -webkit-box;
   display: -moz-box;
@@ -747,7 +820,7 @@ section {
 
 @media (max-width: 45em) {
   #howto {
-    padding: 2rem 0; } }
+    padding: 1rem 0; } }
 #howto .row--grid {
   -webkit-align-items: flex-start;
   -moz-align-items: flex-start;
@@ -764,32 +837,27 @@ section {
       -ms-justify-content: center;
       justify-content: center;
       -ms-flex-pack: center; } }
-@media (min-width: 65em) {
-  #howto .col {
-    width: 50%; } }
-@media (max-width: 65em) {
-  #howto .col {
-    width: 50%; } }
-@media (max-width: 45em) {
-  #howto .col {
-    width: 100%; } }
-#howto .box--green {
-  position: relative; }
-  @media (min-width: 65em) {
-    #howto .box--green {
-      margin: 0 0 0 6rem; } }
+#howto .col {
+  width: 50%; }
   @media (max-width: 45em) {
-    #howto .box--green {
-      margin: 0 6rem 0 6rem; } }
-  @media (max-width: 30em) {
-    #howto .box--green {
-      margin: 0; } }
+    #howto .col {
+      width: 100%; } }
+#howto .box--green {
+  position: relative;
+  margin: 6rem 0 0 -4.8rem; }
   @media (min-width: 65em) {
     #howto .box--green {
       padding-left: 13.8rem; } }
+  @media (max-width: 65em) {
+    #howto .box--green {
+      padding: 6.5rem 3rem 3rem 8.5rem; } }
   @media (max-width: 45em) {
     #howto .box--green {
-      padding-left: 5rem; } }
+      margin: 0 6rem 0 6rem;
+      padding-left: 4rem; } }
+  @media (max-width: 30em) {
+    #howto .box--green {
+      margin: 0; } }
   @media (max-width: 65em) {
     #howto .box--green .row {
       margin: 2.4rem 0 0; } }
@@ -798,16 +866,20 @@ section {
       margin: 2rem 0; } }
   #howto .box--green img {
     margin-right: 2rem; }
-@media (min-width: 65em) {
-  #howto i {
-    color: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    top: 4rem;
-    left: 8.4rem;
-    font-size: 2.4rem; } }
-@media (max-width: 45em) {
-  #howto i {
-    display: none; } }
+#howto i {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 8.4rem;
+  font-size: 2.4rem; }
+  @media (min-width: 65em) {
+    #howto i {
+      top: 4rem; } }
+  @media (max-width: 65em) {
+    #howto i {
+      top: 3rem; } }
+  @media (max-width: 45em) {
+    #howto i {
+      display: none; } }
 
 @media (max-width: 45em) {
   #contact {
@@ -821,29 +893,33 @@ section {
 @media (max-width: 45em) {
   #contact .col {
     width: 100%; } }
-#contact .row--grid {
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  -ms-align-items: flex-start;
-  align-items: flex-start; }
-  @media (max-width: 45em) {
-    #contact .row--grid {
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      -ms-justify-content: center;
-      justify-content: center;
-      -ms-flex-pack: center; } }
+@media (max-width: 45em) {
+  #contact .row--grid {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; } }
 @media (max-width: 30em) {
   #contact input {
     display: block;
-    width: 100%; } }
+    width: 100%;
+    margin: 1.5rem 0; } }
 #contact .box--image {
-  background: url("../img/pp-office.jpg") center center/cover;
-  height: 42rem; }
+  background: url("../img/pp-office.jpg") center center/cover; }
+  @media (min-width: 65em) {
+    #contact .box--image {
+      height: 42rem; } }
+  @media (max-width: 65em) {
+    #contact .box--image {
+      height: 42rem; } }
+  @media (max-width: 45em) {
+    #contact .box--image {
+      height: 20rem; } }
 @media (min-width: 65em) {
   #contact .col--form {
     padding: 0 0 0 6rem; } }

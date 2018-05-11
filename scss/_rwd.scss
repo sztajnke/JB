@@ -2,19 +2,24 @@
 
  @mixin breakpoint($point) {
    @if $point == big {
-     @media (min-width: 65em) { @content ; }
+     @media (min-width: 65em) { 
+       @content; 
+     }
   }
-
     @else if $point == medium {
-		@media (max-width: 65em) { @content ; } 
+      @media (max-width: 65em) { 
+        @content; 
+      } 
 	 }
-  
-  @else if $point == small {
-     @media (max-width: 45em)  { @content ; }
+    @else if $point == small {
+     @media (max-width: 45em) { 
+       @content; 
+    }
   }
-   
-	 @else if $point == micro {
-     @media (max-width: 30em)  { @content ; }
+   	 @else if $point == micro {
+       @media (max-width: 30em) { 
+         @content; 
+    }
   }
 }
 	 
